@@ -1,0 +1,11 @@
+[client]
+showErrorDetails = false
+toolbarMode = "viewer"
+
+[theme]
+base = "light"
+
+# CONFIGURATION EFFECTS
+# showErrorDetails = false: Hides Python tracebacks from the UI, showing a generic error message instead.
+# toolbarMode = "viewer": Removes the hamburger menu and developer controls for regular users.
+# Safe to commit: Unlike secrets.toml, config.toml contains no private keys and belongs in version control.
