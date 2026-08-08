@@ -78,6 +78,7 @@ Requirements:
 - If evidence is insufficient, state:
 
 "I could not find an authentic answer based on the available sources."
+and then answer the nearest possible.
 
 """
 
