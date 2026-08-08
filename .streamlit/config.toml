@@ -2,9 +2,6 @@
 showErrorDetails = false
 toolbarMode = "viewer"
 
-[theme]
-base = "light"
-
 # CONFIGURATION EFFECTS
 # showErrorDetails = false: Hides Python tracebacks from the UI, showing a generic error message instead.
 # toolbarMode = "viewer": Removes the hamburger menu and developer controls for regular users.
