@@ -61,7 +61,7 @@ with st.sidebar:
 
 # Main Header
 st.title("📖 Islamic AI Knowledge Assistant")
-st.caption("Retrieval-Augmented Generation (RAG) powered by Quran & Hadith collections")
+st.caption("Retrieval-Augmented Generation (RAG) powered by Quran")
 
 # Initialize Service
 qa_service = init_qa_service()
