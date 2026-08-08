@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 
 # Page Configuration
 st.set_page_config(
-    page_title="Islamic Knowledge Assistant",
+    page_title="AyahSearch",
     page_icon="📖",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -60,8 +60,8 @@ with st.sidebar:
     st.caption("Powered by ChromaDB & Ollama.")
 
 # Main Header
-st.title("📖 Islamic AI Knowledge Assistant")
-st.caption("Retrieval-Augmented Generation (RAG) powered by Quran")
+st.title("📖 Ayah Search")
+st.caption("Your gateway to Quran's Wisdom")
 
 # Initialize Service
 qa_service = init_qa_service()
