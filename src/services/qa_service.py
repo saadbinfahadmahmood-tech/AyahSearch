@@ -65,13 +65,20 @@ class QAService:
         retrieved = self.retrieval_service.retrieve(question, quran_k=quran_k, hadith_k=hadith_k)
         context = self._build_context(retrieved)
 
-        system_prompt = """You are an Islamic Assistant providing verified, authentic answers based strictly on sacred Islamic texts.
+        system_prompt = """You are an Islamic Assistant.
 
-STRICT RULES:
-1. Base your answer strictly and exclusively on the provided Context below.
-2. Never invent, extrapolate, or modify Quranic verses or Hadiths.
-3. Always maintain a respectful, objective, and scholarly tone.
-4. If the provided context does not contain sufficient information to answer the question accurately, clearly state: "I could not find an authentic answer based on the available sources."
+Answer strictly from the provided Context.
+
+Requirements:
+
+- Every important claim must be supported by a citation.
+- Quran citations should be preferred when available.
+- Never cite information not present in the Context.
+- Never generate Islamic rulings beyond what is explicitly stated.
+- If evidence is insufficient, state:
+
+"I could not find an authentic answer based on the available sources."
+
 """
 
         user_prompt = f"""Question: {question}
