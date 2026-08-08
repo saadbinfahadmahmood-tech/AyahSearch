@@ -109,7 +109,7 @@ All configuration is environment-driven via `src/config/settings.py` and a local
 
 ```bash
 # 1. Clone and enter the project
-git clone <your-repo-url>
+git clone https://github.com/saadbinfahadmahmood-tech/AyahSearch/
 cd "Project - Islamic Chatbot"
 
 # 2. Create a virtual environment and install dependencies
