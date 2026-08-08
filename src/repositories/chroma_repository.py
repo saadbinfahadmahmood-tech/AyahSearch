@@ -1,6 +1,6 @@
 from typing import Any, Dict, List, Optional
 import chromadb
-from chromadb.utils.embedding_functions import OllamaEmbeddingFunction
+from chromadb.utils.embedding_functions import SentenceTransformerEmbeddingFunction
 from src.config.settings import settings
 from src.models.vector_record import VectorRecord
 
@@ -10,11 +10,7 @@ class ChromaRepository:
     def __init__(self, db_path: str, collection_name: str):
         self.client = chromadb.PersistentClient(path=db_path)
         
-        # Attach Ollama directly to ChromaDB as the collection's embedding engine
-        self.embedding_fn = OllamaEmbeddingFunction(
-            model_name=settings.embedding_model,
-            url=f"{settings.ollama_base_url.rstrip('/')}/api/embeddings"
-        )
+        self.embedding_fn = SentenceTransformerEmbeddingFunction(model_name="all-MiniLM-L6-v2")
         
         self.collection = self.client.get_or_create_collection(
             name=collection_name,

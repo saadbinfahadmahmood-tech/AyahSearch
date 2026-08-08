@@ -3,6 +3,8 @@ import pandas as pd
 from src.config.settings import settings
 from src.factories.document_factory import DocumentFactory
 from src.repositories.chroma_repository import ChromaRepository
+from chromadb.utils.embedding_functions import SentenceTransformerEmbeddingFunction
+
 
 from ollama import Client
 
